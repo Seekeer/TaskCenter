@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:Task.UI.Resources">
+    <sys:String x:Key="button_Refresh">Refresh</sys:String>
+    <sys:String x:Key="button_AddTask">Add Task</sys:String>
+    <sys:String x:Key="button_Cancel">Cancel</sys:String>
+    <sys:String x:Key="button_Details">Details</sys:String>
+
+    <sys:String x:Key="checkbox_DisplayAll">Display all</sys:String>
+    <sys:String x:Key="task">Task</sys:String>
+    <sys:String x:Key="executor">Executor</sys:String>
+    <sys:String x:Key="app_name">Tasker</sys:String>
+
+</ResourceDictionary>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="Task.UI.Windows.AddTaskW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Utils.Controls;assembly=Utils.WPF"
+        xmlns:localView="clr-namespace:Task.UI.View"
+        mc:Ignorable="d"
+        Title="AddTaskW" Height="450" Width="800">
+    <Grid Margin="0 5 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="309*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+        <Label   Grid.Row="0">Caption:</Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Caption}"/>
+        
+        <Label   Grid.Row="2">Posts:</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" AcceptsReturn="True" Text="{Binding Urls}"/>
+
+        <Label   Grid.Row="4">Users:</Label>
+        <localView:ExecutorsView Grid.Row="4" Grid.Column="1" VerticalAlignment="Stretch" DataContext="{Binding ExecutorsVM}" />
+
+        <Label Grid.Row="6" Grid.Column="1" Content="{Binding LimitStr}"/>
+
+        <controls:OkCancelButtons Grid.Row="8" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+            Margin="10 10 10 5" 
+            DataContext="{Binding Path=Commands[Add]}"/>
+    </Grid>
+</Window>
